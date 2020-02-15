@@ -1,0 +1,148 @@
+{
+    "provinceName": "山东省",
+    "provinceShortName": "山东",
+    "currentConfirmedCount": 397,
+    "confirmedCount": 523,
+    "suspectedCount": 0,
+    "curedCount": 124,
+    "deadCount": 2,
+    "comment": "",
+    "locationId": 370000,
+    "cities": [
+        {
+            "cityName": "青岛",
+            "currentConfirmedCount": 37,
+            "confirmedCount": 55,
+            "suspectedCount": 0,
+            "curedCount": 17,
+            "deadCount": 1,
+            "locationId": 370200
+        },
+        {
+            "cityName": "济南",
+            "currentConfirmedCount": 36,
+            "confirmedCount": 47,
+            "suspectedCount": 0,
+            "curedCount": 11,
+            "deadCount": 0,
+            "locationId": 370100
+        },
+        {
+            "cityName": "烟台",
+            "currentConfirmedCount": 36,
+            "confirmedCount": 46,
+            "suspectedCount": 0,
+            "curedCount": 10,
+            "deadCount": 0,
+            "locationId": 370600
+        },
+        {
+            "cityName": "潍坊",
+            "currentConfirmedCount": 35,
+            "confirmedCount": 41,
+            "suspectedCount": 0,
+            "curedCount": 6,
+            "deadCount": 0,
+            "locationId": 370700
+        },
+        {
+            "cityName": "聊城",
+            "currentConfirmedCount": 35,
+            "confirmedCount": 38,
+            "suspectedCount": 0,
+            "curedCount": 3,
+            "deadCount": 0,
+            "locationId": 371500
+        },
+        {
+            "cityName": "济宁",
+            "currentConfirmedCount": 31,
+            "confirmedCount": 46,
+            "suspectedCount": 0,
+            "curedCount": 15,
+            "deadCount": 0,
+            "locationId": 370800
+        },
+        {
+            "cityName": "临沂",
+            "currentConfirmedCount": 30,
+            "confirmedCount": 47,
+            "suspectedCount": 0,
+            "curedCount": 17,
+            "deadCount": 0,
+            "locationId": 371300
+        },
+        {
+            "cityName": "威海",
+            "currentConfirmedCount": 29,
+            "confirmedCount": 38,
+            "suspectedCount": 0,
+            "curedCount": 9,
+            "deadCount": 0,
+            "locationId": 371000
+        },
+        {
+            "cityName": "泰安",
+            "currentConfirmedCount": 28,
+            "confirmedCount": 32,
+            "suspectedCount": 0,
+            "curedCount": 4,
+            "deadCount": 0,
+            "locationId": 370900
+        },
+        {
+            "cityName": "德州",
+            "currentConfirmedCount": 27,
+            "confirmedCount": 35,
+            "suspectedCount": 0,
+            "curedCount": 7,
+            "deadCount": 1,
+            "locationId": 371400
+        },
+        {
+            "cityName": "淄博",
+            "currentConfirmedCount": 24,
+            "confirmedCount": 28,
+            "suspectedCount": 0,
+            "curedCount": 4,
+            "deadCount": 0,
+            "locationId": 370300
+        },
+        {
+            "cityName": "枣庄",
+            "currentConfirmedCount": 19,
+            "confirmedCount": 23,
+            "suspectedCount": 0,
+            "curedCount": 4,
+            "deadCount": 0,
+            "locationId": 370400
+        },
+        {
+            "cityName": "日照",
+            "currentConfirmedCount": 13,
+            "confirmedCount": 15,
+            "suspectedCount": 0,
+            "curedCount": 2,
+            "deadCount": 0,
+            "locationId": 371100
+        },
+        {
+            "cityName": "菏泽",
+            "currentConfirmedCount": 9,
+            "confirmedCount": 18,
+            "suspectedCount": 0,
+            "curedCount": 9,
+            "deadCount": 0,
+            "locationId": 371700
+        },
+        {
+            "cityName": "滨州",
+            "currentConfirmedCount": 8,
+            "confirmedCount": 14,
+            "suspectedCount": 0,
+            "curedCount": 6,
+            "deadCount": 0,
+            "locationId": 371600
+        }
+    ]
+}

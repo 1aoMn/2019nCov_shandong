@@ -1,0 +1,9 @@
+{
+  "name": "server_read_json",
+  "version": "1.0.0",
+  "main": "app.js",
+  "license": "MIT",
+  "dependencies": {
+    "http": "^0.0.0"
+  }
+}

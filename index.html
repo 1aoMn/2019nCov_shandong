@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.staticfile.org/echarts/4.3.0/echarts.min.js"></script>
+    
+</head>
+
+<body>
+    <div id="region"></div>
+    <div id="confirmCount"></div>
+    <div id="main" style="width: 600px;height: 400px;"></div>
+    <script type="text/javascript">
+        $.ajaxSetup({
+            async: false
+        });
+        var obj;
+        var Sdata = [];
+        var MaxValue=0;
+        $.get("http://127.0.0.1:8080/data.json", function (data) {
+            obj = eval('(' + data + ')');
+            $("#region").html("省份：" + obj.provinceName);
+            $("#confirmCount").html("确诊数:" + obj.confirmedCount)
+            for (let i = 0; i < 15; i++) {
+                Sdata.push({
+                    name: obj.cities[i].cityName+'市',
+                    value: obj.cities[i].confirmedCount
+                });
+                
+                MaxValue = Math.max(MaxValue , Sdata[i].value)
+            }
+        })
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('main'));
+        var uploadedDataURL = "/geojson/山东省.json";
+        var Mname = 'shandong';
+        myChart.showLoading();
+        $.get(uploadedDataURL, function (geoJson) {
+            myChart.hideLoading();
+            echarts.registerMap(Mname, geoJson);
+            myChart.setOption(option = {
+                title: {
+                    text: '山东省新型肺炎疫情实时地图',
+                    left: 'center', //标题位置
+                    textStyle: {
+                        fontSize: 32,
+                        fontWeight: 'bolder',
+                        color: 'black' // 主标题文字颜色
+                    }
+                },
+                color: ['orange'],
+                legend: {
+                    orient: 'vertical',
+                    left: 'left',
+                    textStyle: {
+                        fontSize: 20,
+                        color: 'black' // 图例文字颜色
+                    },
+                },
+
+                visualMap: {
+                    min: 0,
+                    max: MaxValue,
+                    left: 'left',
+                    top: 'bottom',
+                    text: ['高', '低'], // 文本，默认为数值文本
+                    calculable: true,
+                },
+                toolbox: {
+                    show: true,
+                    orient: 'vertical',
+                    left: 'right',
+                    top: 'center',
+                    feature: {
+                        dataView: {
+                            readOnly: false
+                        },
+                        restore: {},
+                        saveAsImage: {}
+                    }
+                },
+                series: [{
+                    name: '地市',
+                    type: 'map',
+                    mapType: Mname,
+                    label: {
+                        show: true
+                    },
+                    data: Sdata
+                }]
+            });
+        });
+
+    </script>
+</body>
+
+</html>
